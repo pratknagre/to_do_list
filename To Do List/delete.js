@@ -40,3 +40,14 @@ function editTask(button) {
         span.innerText = newText;
     }
 }
+
+// delete button fix
+
+function deleteTask(button) {
+    const li = button.closest("li");  
+    li.classList.add("fade-out");
+
+    setTimeout(() => {
+        li.remove();
+    }, 400);
+}
